@@ -1,9 +1,14 @@
-import './App.css'
+import React from "react"; // Importamos o React
+import Header from "./componentes/Header"; // Importamos o cabeçalho
+import Login from "./pages/login"; // Importamos a tela de login
 
-export default function App() {
+function App() {
   return (
-    <main>
-      React ⚛️ + Vite ⚡ + Replit
-    </main>
-  )
+    <div>
+      <Header /> {/* Mostramos o cabeçalho */}
+      <Login /> {/* Mostramos a tela de login */}
+    </div>
+  );
 }
+
+export default App;
