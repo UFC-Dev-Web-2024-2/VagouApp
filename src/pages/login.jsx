@@ -1,36 +1,49 @@
-import React from "react"; // Importamos o React para criar o componente
-import { Box, Card, TextField, Button, Typography, Link } from "@mui/material"; // Importamos os componentes do Material UI
+import React from "react";
+import { Box, Card, TextField, Button, Typography, Link } from "@mui/material";
+const backgroundImage = "/pessoaselogo.png";
+ // Importe a imagem corretamente
 
 const Login = () => {
   return (
     <Box
       sx={{
-        display: "flex", // Organiza os elementos em linha ou coluna
-        justifyContent: "center", // Centraliza os elementos horizontalmente
-        alignItems: "center", // Centraliza os elementos verticalmente
-        height: "100vh", // Faz o fundo ocupar toda a tela
-        backgroundColor: "#f4f6f8", // Define a cor do fundo
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        height: "100vh",
+        backgroundColor: "#f4f6f8",
       }}
     >
-      {/* Criamos um cartão branco no centro */}
-      <Card sx={{ display: "flex", width: 900, height: 500 }}>
-        {/* Parte da esquerda com imagem */}
+      {/* Card centralizado */}
+      <Card sx={{ display: "flex", width: 900, height: 500, borderRadius: 3, overflow: "hidden" }}>
+        
+        {/* Parte da esquerda com imagem e sobreposição */}
+
+        <Box sx={{ width: "50%", height: "100%" }}>
+  <img src={backgroundImage} alt="Login Background" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+</Box>
+
         <Box
           sx={{
             width: "50%",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            backgroundImage:
-              "url('https://source.unsplash.com/600x600/?technology')",
+            position: "relative",
+            backgroundImage: `url(${backgroundImage})`, // Agora a imagem é carregada corretamente
             backgroundSize: "cover",
             backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
           }}
         >
-          {/* Logo no meio da imagem */}
-          <Typography variant="h1" sx={{ color: "white", fontWeight: "bold" }}>
-            VA
-          </Typography>
+          {/* Sobreposição escura */}
+          <Box
+            sx={{
+              position: "absolute",
+              top: 0,
+              left: 0,
+              width: "100%",
+              height: "100%",
+              backgroundColor: "rgba(0, 0, 0, 0.5)", // Efeito escuro sobre a imagem
+            }}
+          />
         </Box>
 
         {/* Parte da direita com formulário de login */}
@@ -46,7 +59,13 @@ const Login = () => {
           <TextField fullWidth label="E-mail" margin="normal" />
 
           {/* Campo de Senha */}
-          <TextField fullWidth label="Senha" type="password" margin="normal" />
+          <TextField
+            fullWidth
+            label="Senha"
+            type="password"
+            margin="normal"
+            sx={{ borderRadius: 4 }}
+          />
 
           {/* Link para recuperar senha */}
           <Link

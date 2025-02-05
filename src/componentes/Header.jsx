@@ -1,26 +1,35 @@
-import React from "react"; // Importamos o React
-import AppBar from "@mui/material/AppBar"; // A barra azul no topo
-import Toolbar from "@mui/material/Toolbar"; // A área dentro da barra azul
-import IconButton from "@mui/material/IconButton"; // Botão de voltar
-import Typography from "@mui/material/Typography"; // Texto
-import ArrowBackIcon from "@mui/icons-material/ArrowBack"; // Ícone de seta para voltar
+import React from "react"; // Importa a biblioteca React
+import AppBar from "@mui/material/AppBar"; // Importa a AppBar (barra superior) do Material UI
+import Toolbar from "@mui/material/Toolbar"; // Importa a Toolbar (área interna da AppBar)
+import Typography from "@mui/material/Typography"; // Importa o componente Typography para exibir texto
 
+// Componente do cabeçalho
 const Header = () => {
   return (
+    // Barra superior (AppBar) com cor de fundo azul
     <AppBar position="static" sx={{ backgroundColor: "#1976d2" }}>
+      
+      {/* Toolbar é usada para alinhar os elementos dentro da AppBar */}
       <Toolbar>
-        {/* Botão de voltar */}
-        <IconButton edge="start" color="inherit" aria-label="voltar">
-          <ArrowBackIcon />
-        </IconButton>
-
-        {/* Nome do app */}
-        <Typography variant="h6" sx={{ flexGrow: 1 }}>
-          Vagou.App
+        
+        {/* Texto centralizado com estilo personalizado */}
+        <Typography
+          variant="h6" // Define o tamanho padrão do texto
+          sx={{
+            flexGrow: 1, // Faz o texto ocupar todo o espaço disponível, permitindo centralização
+            textAlign: "center", // Centraliza o texto horizontalmente
+            fontSize: "1.5rem", // Define o tamanho da fonte
+            fontWeight: "bold", // Deixa o texto em negrito
+            color: "white", // Define a cor do texto como branco
+            fontFamily: "Arial, sans-serif", // Define a fonte do texto
+          }}
+        >
+          Vagou.App {/* Nome do aplicativo exibido no cabeçalho */}
         </Typography>
+
       </Toolbar>
     </AppBar>
   );
 };
 
-export default Header;
+export default Header; // Exporta o componente Header para ser utilizado em outras partes do app
