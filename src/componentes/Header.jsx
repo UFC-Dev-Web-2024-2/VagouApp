@@ -1,35 +1,55 @@
-import React from "react"; // Importa a biblioteca React
-import AppBar from "@mui/material/AppBar"; // Importa a AppBar (barra superior) do Material UI
-import Toolbar from "@mui/material/Toolbar"; // Importa a Toolbar (área interna da AppBar)
-import Typography from "@mui/material/Typography"; // Importa o componente Typography para exibir texto
+import React from "react";
+import { Link } from "react-router-dom";
+import {
+  Search as SearchIcon,
+  Home as HomeIcon,
+  Login as LoginIcon,
+} from "@mui/icons-material";
 
-// Componente do cabeçalho
-const Header = () => {
+function Header() {
   return (
-    // Barra superior (AppBar) com cor de fundo azul
-    <AppBar position="static" sx={{ backgroundColor: "#1976d2" }}>
-      
-      {/* Toolbar é usada para alinhar os elementos dentro da AppBar */}
-      <Toolbar>
-        
-        {/* Texto centralizado com estilo personalizado */}
-        <Typography
-          variant="h6" // Define o tamanho padrão do texto
-          sx={{
-            flexGrow: 1, // Faz o texto ocupar todo o espaço disponível, permitindo centralização
-            textAlign: "center", // Centraliza o texto horizontalmente
-            fontSize: "1.5rem", // Define o tamanho da fonte
-            fontWeight: "bold", // Deixa o texto em negrito
-            color: "white", // Define a cor do texto como branco
-            fontFamily: "Arial, sans-serif", // Define a fonte do texto
-          }}
-        >
-          Vagou.App {/* Nome do aplicativo exibido no cabeçalho */}
-        </Typography>
+    <nav className="bg-blue-500 text-white p-4">
+      <div className="max-w-7xl mx-auto flex items-center justify-between">
+        <Link to="/" className="flex items-center space-x-2">
+          <HomeIcon sx={{ fontSize: 32 }} />
+          <span className="text-xl font-bold">Vagou.App</span>
+        </Link>
 
-      </Toolbar>
-    </AppBar>
+        <div className="flex-1 max-w-2xl mx-8">
+          <div className="relative">
+            <input
+              type="text"
+              placeholder="Pesquisar"
+              className="w-full px-4 py-2 rounded-lg text-gray-900 focus:outline-none"
+            />
+            <SearchIcon className="absolute right-3 top-2.5 text-gray-400" />
+          </div>
+        </div>
+
+        <div className="flex items-center space-x-6">
+          <Link to="/imoveis" className="hover:text-gray-200">
+            Imoveis
+          </Link>
+          <Link to="/" className="hover:text-gray-200">
+            Início
+          </Link>
+          <Link to="/sobre" className="hover:text-gray-200">
+            Sobre nós
+          </Link>
+          <Link to="/contatos" className="hover:text-gray-200">
+            Contatos
+          </Link>
+          <Link
+            to="/login"
+            className="bg-white text-blue-500 px-4 py-2 rounded-lg font-medium flex items-center space-x-2"
+          >
+            <LoginIcon sx={{ fontSize: 20 }} />
+            <span>Entrar</span>
+          </Link>
+        </div>
+      </div>
+    </nav>
   );
-};
+}
 
-export default Header; // Exporta o componente Header para ser utilizado em outras partes do app
+export default Header;

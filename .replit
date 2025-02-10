@@ -21,3 +21,8 @@ externalPort = 80
 [[ports]]
 localPort = 5174
 externalPort = 3000
+
+[dependencies]
+tailwindcss = "^2.2.19"
+postcss = "^8.3.6"
+autoprefixer = "^10.2.6"
