@@ -1,41 +1,43 @@
 import React from 'react';
 import { Container, Typography, Box, AppBar, Toolbar, Button } from '@mui/material';
 import Header from '../componentes/Header';
-'rgb(0, 30, 79)'
 const SobreNos = () => {
   return (
-    
     <Container maxWidth="lg">
+      
+      <Box sx={{ width: '100%' , my: 4,backgroundColor: 'rgb(25, 118, 210, 0.9)', backgroundImage: 'url(assets/image.png)', backgroundSize: 'cover', backgroundPosition: 'center'}}>
       <Header />
-      <Box sx={{ my: 4 }}>
-        <Box position="static" sx={{ bgcolor: 'rgb(0, 30, 79)'}}>
-            <Typography variant="h6" component="div" sx={{ flexGrow: 1, textAlign: 'center', color: 'white',fontWeight: 'bold',fontSize: '30px' }}>
-              Sobre nós
-            </Typography>
-        </Box>
-        <Box sx={{ width: '50%' ,my: 4,ml: '40px' }}>
-          <Typography variant="body1">
-            A Vagou.app é uma plataforma criada especialmente para ajudar universitários a encontrar a moradia ideal de forma prática, segura e descomplicada.
+      <Box sx={{ width: '50%', color:'white' ,my: 4,ml: '40px' }}>
+          <Typography variant="h4" component="h1">
+            Sobre Nós
           </Typography>
+          
+          <Box sx={{ width: '200%', my: 4 }}>
+            <Box sx={{ width: '50%', my: 4 }}>
+              <Typography variant="body1">
+                A Vagou.app é uma plataforma criada especialmente para ajudar universitários a encontrar a moradia ideal de forma prática, segura e descomplicada.
+              </Typography>
+            </Box>
+            <Box sx={{ width: '60%', my: 4 }}>
+              <Typography variant="body1" sx={{ flex: 1 }}>
+                Voltada tanto para estudantes quanto para proprietários, o Vagou oferece uma experiência completa: desde a busca por apartamentos ou quartos até o fechamento do contrato digital.
+              </Typography>
+              <Box component="img" src="assets/ellipse2.png" alt="Descrição da imagem" sx={{ width: '50%', ml: 80,display: 'block' }} />
+              </Box>
+            <Box sx={{ width: '50%', my: 4 }}>
+              <Typography variant="body1">
+                Com funcionalidades como pagamentos pelo app, chat integrado, avaliações de imóveis e prevenção contra golpes, o Vagou facilita o dia a dia de quem está em busca de um novo lar. Além disso, proporciona informações úteis e ferramentas que ajudam a tomar a melhor decisão na hora de alugar um imóvel.
+              </Typography>
+            </Box>
+          </Box>
         </Box>
-        <Box sx={{ width: '50%', my: 4,ml: '40px' }}>
-          <Typography variant="body1">
-            Voltada tanto para estudantes quanto para proprietários, o Vagou oferece uma experiência completa: desde a busca por apartamentos ou quartos até o fechamento do contrato digital.
-          </Typography>
-        </Box>
-        <Box sx={{ width: '50%', my: 4,ml: '40px' }}>
-          <Typography variant="body1">
-            Com funcionalidades como pagamentos pelo app, chat integrado, avaliações de imóveis e prevenção contra golpes, o Vagou facilita o dia a dia de quem está em busca de um novo lar. Além disso, proporciona informações úteis e ferramentas que ajudam a tomar a melhor decisão na hora de alugar um imóvel.
-          </Typography>
-        </Box>
-
-        <Box sx={{ width: '50%', my: 4,ml: '40px' }}>
+        <Box sx={{ width: '50%', color:'white' ,my: 4,ml: '40px' }}>
           <Typography variant="h4" component="h1">
             História
           </Typography>
           
-          <Box sx={{ width: '200%', my: 4, display: 'flex', flexDirection: 'row', justifyContent: 'space-between', gap : '80px' }}>
-            <Box sx={{ width: '100%' }}>
+          <Box sx={{ width: '200%', my: 4 }}>
+            <Box sx={{ width: '60%', my: 4 }}>
               <Typography variant="body1">
                 A Vagou surgiu entre julho e agosto de 2023. Formada inicialmente por alunos da universidade
                 federal do Ceará (UFC), campus Quixadá, a ideia nasceu de forma natural quando David Natanael, CEO
@@ -44,7 +46,7 @@ const SobreNos = () => {
                 incompleta. Isso mudou ao descobrir que outra equipe com ideias complementares também precisava de mais membros. 
               </Typography>
             </Box>
-            <Box sx={{ width: '100%' }}>
+            <Box sx={{ width: '60%', my: 4 }}>
               <Typography variant="body1">
                 Assim, David se uniu a Jerley dos Santos (Gerente de Marketing), Diego Moreira (Desenvolvedor Web) e
                 Nathan dos Santos (Desenvolvedor Fullstack). Com o time formado, o projeto começou a ganhar forma, porém
@@ -53,11 +55,13 @@ const SobreNos = () => {
                 suas habilidades e conhecimentos. A Vagou cresceu desde então, sendo reconhecida como uma das principais startups
                 emergentes do Ceará.
               </Typography>
+              <Box component="img" src="assets/ellipse1.png" alt="Descrição da imagem" sx={{ width: '50%', ml: 80,display: 'block' }} />
+            
             </Box>
           </Box>
         </Box>
         
-        <Box position="static" sx={{ bgcolor: 'rgb(0, 30, 79)', height: '400px' }}>
+        <Box position="static" >
             <Box sx={{ height: '30px' }}></Box>
             <Box sx={{ width: '50%', my: 4,ml: '40px',color: 'white',height: '50px' }}>
               <Typography variant="h4" component="h1" sx={{ flexGrow: 1, color: 'white', fontWeight: 'bold' }}>
@@ -75,14 +79,38 @@ const SobreNos = () => {
               </Typography>
             </Box>
         </Box>
-        <Box position="static" sx={{ bgcolor: 'white', height: '400px' }}>
+         <Box position="static" sx={{ bgcolor:'rgb(25, 118, 210)' , height: '400px' }}>
             <Box sx={{ height: '30px' }}></Box>
-            <Box sx={{ width: '50%', my: 4,ml: '40px',color: 'rgb(0, 30, 79)',height: '50px' }}>
+            <Box sx={{ width: '50%', my: 4,ml: '40px',color: 'white',height: '50px' }}>
               <Typography variant="h4" component="h1" sx={{ flexGrow: 1, fontWeight: 'bold' }}>
                 Função Social
               </Typography>
             </Box>
-            <Box sx={{ my: 4,ml: '40px',color: 'rgb(0, 30, 79)' }}>
+            <Box sx={{ my: 4,ml: '40px',color: 'white' }}>
+              <Typography variant="body1">
+              A função social da Vagou é facilitar o acesso a moradias para estudantes universitários, promovendo inclusão, segurança e praticidade no processo de encontrar e alugar imóveis. A plataforma ajuda a conectar jovens de diferentes origens, permitindo que eles compartilhem despesas, encontrem colegas compatíveis para dividir moradia e façam contratos de forma descomplicada. Além disso, a Vagou contribui para a prevenção de fraudes, oferece informações úteis sobre serviços essenciais e cria uma rede de confiança com avaliações e feedbacks, promovendo uma experiência de moradia mais acessível e colaborativa para os estudantes.  
+              </Typography>
+            </Box>
+            
+        </Box>
+        <Box position="static" sx={{ bgcolor:'white' , height: '600px' }}>
+            <Box sx={{ height: '30px' }}></Box>
+            <Box sx={{ width: '50%', my: 4,ml: '40px',color: 'rgb(25, 118, 210)',height: '0px' }}>
+              <Typography variant="h4" component="h1" sx={{ flexGrow: 1, fontWeight: 'bold' }}>
+                Membros
+              </Typography>
+            </Box>
+            <Box component="img" src="assets/mentoria.png" alt="Descrição da imagem" sx={{ width: '100%',display: 'flex' }} />
+            
+        </Box>
+        <Box position="static" sx={{ bgcolor:'rgb(25, 118, 210)' , height: '400px' }}>
+            <Box sx={{ height: '30px' }}></Box>
+            <Box sx={{ width: '50%', my: 4,ml: '40px',color: 'white',height: '50px' }}>
+              <Typography variant="h4" component="h1" sx={{ flexGrow: 1, fontWeight: 'bold' }}>
+                Função Social
+              </Typography>
+            </Box>
+            <Box sx={{ my: 4,ml: '40px',color: 'white' }}>
               <Typography variant="body1">
               A função social da Vagou é facilitar o acesso a moradias para estudantes universitários, promovendo inclusão, segurança e praticidade no processo de encontrar e alugar imóveis. A plataforma ajuda a conectar jovens de diferentes origens, permitindo que eles compartilhem despesas, encontrem colegas compatíveis para dividir moradia e façam contratos de forma descomplicada. Além disso, a Vagou contribui para a prevenção de fraudes, oferece informações úteis sobre serviços essenciais e cria uma rede de confiança com avaliações e feedbacks, promovendo uma experiência de moradia mais acessível e colaborativa para os estudantes.  
               </Typography>
