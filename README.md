@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+
 ## Running React on Replit
 
 [React](https://reactjs.org/) is a popular JavaScript library for building user interfaces.
@@ -7,6 +9,7 @@
 Using the two in conjunction is one of the fastest ways to build a web app.
 
 ### Getting Started
+
 - Hit run
 - Edit [App.jsx](#src/App.jsx) and watch it live update!
 

@@ -5,6 +5,7 @@ import Footer from "./componentes/Footer";
 import Home from "./pages/Home";
 import Login from "./pages/login";
 import SobreNos from "./pages/sobreNos";
+import Imoveis from "./pages/imoveis/Imoveis";
 import "./index.css"; // Importar o Tailwind CSS
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/sobre" element={<SobreNos />} />
+          <Route path="/imoveis" element={<Imoveis />} />
           {/* Adicione outras rotas conforme necessário */}
         </Routes>
         <Footer />
