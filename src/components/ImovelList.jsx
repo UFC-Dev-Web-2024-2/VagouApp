@@ -1,16 +1,14 @@
 import React from "react";
 import { Grid } from "@mui/material";
 import ImovelItem from "./ImovelItem";
-
-// Importando as imagens manualmente
-import casa1 from "../../../assets/image1.png";
-import chale from "../../../assets/image2.png";
-import kitnet from "../../../assets/image3.png";
-import casa2 from "../../../assets/image4.png";
-import casa3 from "../../../assets/image5.png";
-import casa4 from "../../../assets/image6.png";
-import casa5 from "../../../assets/image7.png";
-import casa6 from "../../../assets/image8.png";
+import casa1 from "/assets/image1.png";
+import chale from "/assets/image2.png";
+import kitnet from "/assets/image3.png";
+import casa2 from "/assets/image4.png";
+import casa3 from "/assets/image5.png";
+import casa4 from "/assets/image6.png";
+import casa5 from "/assets/image7.png";
+import casa6 from "/assets/image8.png";
 
 const imoveis = [
   {

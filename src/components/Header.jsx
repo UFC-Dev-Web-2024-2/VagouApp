@@ -14,7 +14,6 @@ function Header() {
           <HomeIcon sx={{ fontSize: 32 }} />
           <span className="text-xl font-bold">Vagou.App</span>
         </Link>
-
         <div className="flex-1 max-w-2xl mx-8">
           <div className="relative">
             <input
@@ -25,7 +24,6 @@ function Header() {
             <SearchIcon className="absolute right-3 top-2.5 text-gray-400" />
           </div>
         </div>
-
         <div className="flex items-center space-x-6">
           <Link to="/imoveis" className="hover:text-gray-200">
             Imoveis

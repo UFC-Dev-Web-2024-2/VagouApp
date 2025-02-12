@@ -1,11 +1,12 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Header from "./componentes/Header";
-import Footer from "./componentes/Footer";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import Login from "./pages/login";
 import SobreNos from "./pages/sobreNos";
-import Imoveis from "./pages/imoveis/Imoveis";
+import Imoveis from "./pages/Imoveis";
+import Contatos from "./pages/Contato";
 import "./index.css"; // Importar o Tailwind CSS
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/sobre" element={<SobreNos />} />
           <Route path="/imoveis" element={<Imoveis />} />
+          <Route path="/contatos" element={<Contatos />} />
           {/* Adicione outras rotas conforme necessário */}
         </Routes>
         <Footer />
