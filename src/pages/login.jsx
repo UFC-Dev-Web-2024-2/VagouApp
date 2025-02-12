@@ -1,6 +1,6 @@
 import React from "react";
 
-const backgroundImage = "/pessoaselogo.png";
+const backgroundImage = "/assets/pessoaselogo.png";
 
 const Login = () => {
   return (

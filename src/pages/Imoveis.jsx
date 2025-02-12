@@ -1,7 +1,6 @@
 import React from "react";
 import { Container, Typography, Box } from "@mui/material";
-import ImovelList from "./ImovelList";
-import Divulgacao from "./Divulgacao";
+import ImovelList from "../components/ImovelList";
 
 function Imoveis() {
   return (
@@ -11,9 +10,6 @@ function Imoveis() {
           Imóveis Disponíveis
         </Typography>
         <ImovelList />
-        <Box sx={{ my: 4 }}>
-          <Divulgacao />
-        </Box>
       </Box>
     </Container>
   );
