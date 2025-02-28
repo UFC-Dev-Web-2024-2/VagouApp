@@ -43,7 +43,7 @@ const Login = () => {
 
   return (
     <div className="flex justify-center items-center h-screen bg-gray-100">
-      <div className="flex w-11/12 md:w-3/4 lg:w-2/3 xl:w-1/2 h-3/4 rounded overflow-hidden shadow-lg">
+      <div className="flex w-11/12 md:w-3/4 lg:w-2/3 xl:w-1/2 h-3/4 rounded-lg overflow-hidden shadow-lg">
         {/* Imagem do lado esquerdo */}
         <div className="w-1/2 h-full">
           <img
@@ -64,7 +64,7 @@ const Login = () => {
               <label className="block text-gray-700">E-mail</label>
               <input
                 type="email"
-                className="w-full p-2 border border-gray-300 rounded mt-1"
+                className="w-full p-2 border border-gray-300 rounded-full mt-1"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
@@ -76,7 +76,7 @@ const Login = () => {
               <label className="block text-gray-700">Senha</label>
               <input
                 type="password"
-                className="w-full p-2 border border-gray-300 rounded mt-1"
+                className="w-full p-2 border border-gray-300 rounded-full mt-1"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 required
@@ -91,7 +91,7 @@ const Login = () => {
             {/* Botão de login */}
             <button
               type="submit"
-              className="w-full bg-blue-600 text-white p-2 rounded mb-4"
+              className="w-full bg-blue-600 text-white p-2 rounded-full mb-4"
             >
               Entrar
             </button>
