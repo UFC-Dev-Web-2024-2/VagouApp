@@ -13,7 +13,7 @@ const Cadastro = () => {
           />
         </div>
         <div className="w-1/2 p-8 bg-white">
-          <h2 className="text-2xl font-bold mb-4">Cadastro</h2>
+          <h2 className="text-2xl font-bold mb-4">Cadastro Vagou</h2>
           <p className="mb-6">Crie sua conta para começar</p>
         </div>
       </div>
